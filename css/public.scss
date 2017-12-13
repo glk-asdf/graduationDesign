@@ -1,0 +1,29 @@
+%reset{
+	margin:0;
+	padding: 0;
+	border: 0;
+	
+}
+body{
+	font-family: 'myriad normal','sans-serif';
+	font-size: 12px;
+	@extend %reset;
+}
+ul,li,h1,p{
+	list-style: none;
+	@extend %reset;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*字体位置*/
+$font-path:'../fonts/';
+/*zi*/
+@mixin fontasd($name,$fontname){
+	@font-face{
+
+	}
+}

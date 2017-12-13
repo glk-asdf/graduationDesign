@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>校园广播投票点歌</title>
+	<script src="js/jquery-1.12.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<!-- 头部 -->
+<div class="header">
+	<img src="img/banner3.jpg">
+</div>
+<ul class="menubar">
+	<li class="menuclc4">排行榜</li>
+	<li class="menuclc5">音乐库</li>
+	<li class="menuclc6">上传音乐</li>
+	<li class="menuclc7">留言板</li>
+	<div class="chap">修改密码</div>
+</ul>
+<ul class="content">
+	<!-- 排行榜 -->
+	<li>
+		<ul class="caption">
+			<li>
+				<span>歌名</span>
+				<span>时长</span>
+				<span>请投票</span>
+				<span>票数</span>
+			</li>
+		</ul>
+		<ul class="rank">
+			
+		</ul>
+	</li>
+	<!-- 音乐库 -->
+	<li>
+		<ul class="caption">
+			<li>
+				<span>歌名</span>
+				<span>时长</span>
+				<span>请投票</span>
+			</li>
+		</ul>
+		<ul class="library">
+
+		</ul>
+	</li>
+	<li>
+		<!-- 上传音乐 -->
+		<ul class="upload">
+			<li>
+				<span>本服务器不支持汉字，请将歌曲名改为拼音或英语,否则会随机一个数字作为歌曲名</span>
+			</li>
+			<li>			
+				<label for="text">修改的名称</label>
+				<input type="text" name="text">
+			</li>
+			<form action="php/shangchuan.php" method="post"	enctype="multipart/form-data">
+				<li>
+					<input type="file" name="file" /> 
+				</li>
+				<li class="submit">
+				上传
+					<input type="submit" name="submit" value="上传" />
+				</li>			
+			</form>
+		</ul>	
+	</li>
+	<li>
+		<!-- 留言板 -->
+		<ul class="message">
+			
+			<li>
+				<span>题目(必填)</span>
+				<input type="text" placeholder='支持英语和拼音'>
+			</li>
+			<li>
+				<span>内容(必填)</span>
+				<textarea placeholder='支持英语和拼音' name="textarea" id="" cols="80" rows="10"></textarea>
+			</li>
+			<li>
+				<span class='liuyan'>提交</span>
+			</li>
+			
+		</ul>
+	</li>
+</ul>
+<!-- 播放器 -->
+<div class="player">
+	<audio src="./music/ac.mp3" id="audio"></audio>
+	<div class="butt">
+		<div class="show">></div>
+		<ul>
+			<li><span class="mcti">ac.mp3</span></li>
+			<li>
+				<div class="premc"></div>
+				<div class="pause"></div>
+				<div class="play"></div>
+				<div class="nextmc"></div>
+				<div class="for1"></div>
+				<div class="forall"></div>
+				<div class="frandom"></div>
+			</li>
+			<li>
+				<div class="mute"></div>
+				<div class="mute2"></div>
+				<div class="volume">
+					<div class="volumea"></div>
+					<div class="volumeb"></div>
+				</div>
+			</li>
+			<li class="tlength">
+				<span>0:00</span>
+				<div class="timele">
+					<div class="timelo">
+						<div class="timepl"></div>
+						<div class="timepl2"></div>
+					</div>
+				</div>
+				<span>2:05</span>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 登录界面 -->
+<div class="sign">
+	<ul class="signui">
+		<li><input type="text" name="user" class="user" placeholder="用户名"></li>
+		<li><input type="password" name="password" class="password" placeholder="密码"></li>
+		<li><input type="button" value="登录" class="signuser"></li>
+	</ul>
+</div>
+
+<!-- <span class="delmic">清除</span> -->
+	
+</body>
+<script src="js/index.js"></script>
+</html>

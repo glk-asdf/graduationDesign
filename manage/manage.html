@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理界面</title>
+	<script src="../js/jquery-1.12.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/manage.css">
+</head>
+<body>
+<!-- 头部 -->
+<div class="header">
+	<img src="../img/gsxy.jpg">
+</div>
+<ul class="menubar">
+	<li class="menuclc5">排行榜</li>
+	<li class="menuclc6">音乐库</li>
+	<li class="menuclc7">上传音乐处理</li>
+	<li class="menuclc8">留言板查看</li>
+	<li class="menuclc9">用户管理</li>
+	<div class="chap">重置票数</div>
+</ul>
+<ul class="content">
+	<!-- 排行榜 -->
+	<li>
+		<ul class="caption">
+			<li>
+				<span>歌名</span>
+				<span>时长</span>
+				<span>票数</span>
+			</li>
+		</ul>
+		<ul class="rank">
+			
+		</ul>
+	</li>
+	<!-- 音乐库 -->
+	<li>
+		<ul class="caption">
+			<li>
+				<span>歌名</span>
+				<span>时长</span>
+			</li>
+		</ul>
+		<ul class="library">
+
+		</ul>
+	</li>
+	<!-- 上传音乐处理 -->
+	<li>
+		<ul class="caption">
+			<li>
+				<span>歌名</span>
+				<span>时长</span>
+				<!-- <span>通过</span>
+				<span>删除</span> -->
+			</li>
+		</ul>
+		<ul class="passdel">
+
+		</ul>
+	</li>
+	<!-- 留言板查看 -->
+	<li>
+		<ul class="message">
+			<li>
+				<span>qwer</span>
+				<p>dfhghdfghdfgdh</p>
+			</li>
+			<li>
+				<span>qwer</span>
+				<p>dfhghdfghdfgdh</p>
+			</li>
+			<li>
+				<span>qwer</span>
+				<p>dfhghdfghdfgdh</p>
+			</li>
+		</ul>
+		<span class="messdel">清空</span>
+	</li>
+	<!-- 学生和管理员管理 -->
+	<li>
+	<ul class="manage">
+		<li>添加学生</li>
+		<li>添加管理员</li>
+		<li>修改学生或管理员</li>
+		<li>删除学生</li>
+		<li>删除管理员</li>
+	</ul>
+	<ul class="dealwith">
+		<li>
+			<input type="text" placeholder="起始学号" class="startid">
+			至：<input type="text" placeholder="终止学号" class="endid">
+			<span class="butid">添加</span>
+		</li>
+		<li>
+			<input type="text" placeholder="用户名" class="userid">
+			<input type="text" placeholder="密码" class="passwordid">
+			<span class="butid2">添加</span>
+		</li>
+		<li>
+			<input type="text" placeholder="用户名" class="userid2">
+			<input type="text" placeholder="密码" class="passwordid2">
+			<span class="butid3">修改</span>
+		</li>
+		<li>
+			<input type="text" placeholder="起始学号" class="startid2">
+			至：<input type="text" placeholder="终止学号" class="endid2">
+			<span class="butid4">删除</span>
+		</li>
+		<li>
+			<input type="text" placeholder="用户名" class="userid3">
+			<span class="butid5">删除</span>
+		</li>
+	</ul>
+	</li>
+</ul>
+<!-- 播放器 -->
+<div class="player">
+	<audio src="../music/ac.mp3" id="audio"></audio>
+	<div class="butt">
+		<div class="show">></div>
+		<ul>
+			<li><span class="mcti">ac.mp3</span></li>
+			<li>
+				<div class="premc"></div>
+				<div class="pause"></div>
+				<div class="play"></div>
+				<div class="nextmc"></div>
+				<div class="for1"></div>
+				<div class="forall"></div>
+				<div class="frandom"></div>
+			</li>
+			<li>
+				<div class="mute"></div>
+				<div class="mute2"></div>
+				<div class="volume">
+					<div class="volumea"></div>
+					<div class="volumeb"></div>
+				</div>
+			</li>
+			<li class="tlength">
+				<span>0:00</span>
+				<div class="timele">
+					<div class="timelo">
+						<div class="timepl"></div>
+						<div class="timepl2"></div>
+					</div>
+				</div>
+				<span>2:05</span>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 登录界面 -->
+<div class="sign">
+	<ul class="signui">
+		<li><input type="text" name="user" class="user" placeholder="用户名"></li>
+		<li><input type="password" name="password" class="password" placeholder="密码"></li>
+		<li><input type="button" value="登录" class="signuser"></li>
+	</ul>
+</div>
+
+<!-- <span class="delmic">清除</span> -->
+	
+</body>
+<script src="../js/manage.js"></script>
+</html>

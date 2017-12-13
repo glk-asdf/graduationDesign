@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<span>初始化中</span>
+	<p>初始化中</p>
+</body>
+<script src="../js/jquery-1.12.0.js"></script>
+<script type="text/javascript">
+	dataglk=[{"name":"aa.mp3","piao":0,"src":"music/aa.mp3","duration":"2:13"},{"name":"ab.mp3","piao":0,"src":"music/ab.mp3","duration":"1:42"},{"name":"ac.mp3","piao":0,"src":"music/ac.mp3","duration":"2:05"}];
+	$.grep(dataglk,function(v){
+		$.get('/lunwen/php/adddatabase.php',v)
+		if (v.name==="ac.mp3") {
+			$('span').delay(1000).text('完成')
+		};
+	})
+	$.get({
+			url:'/lunwen/php/addusersglk.php',
+			data:{name:'gsxy',password:'gsxy',manage:'manage'}
+		}).done(function(){
+			console.log(1)
+					$('p').delay(1000).text('完成')
+		})
+// dataglk=[{"name":"51.孔庙.mp3","piao":0,"src":"music/51.孔庙.mp3","duration":"3:02"},{"name":"50.醉瑶池.mp3","piao":3,"src":"music/50.醉瑶池.mp3","duration":"1:18"},{"name":"49.潜龙行.mp3","piao":2,"src":"music/49.潜龙行.mp3","duration":"5:22"}];
+		// rank=[{"name":"51.孔庙.mp3","piao":0,"src":"music/51.孔庙.mp3","duration":"3:02"},{"name":"50.醉瑶池.mp3","piao":3,"src":"music/50.醉瑶池.mp3","duration":"1:18"},{"name":"49.潜龙行.mp3","piao":2,"src":"music/49.潜龙行.mp3","duration":"5:22"}];
+</script>
+</html>
